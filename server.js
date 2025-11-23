@@ -295,7 +295,8 @@ async function startServer() {
     await ensureDownloadsDir();
     await ensureYtDlp();
 
-    app.listen(PORT, '0.0.0.0', () => {
+    // Railway-compatible - no host binding
+    app.listen(PORT, () => {
       console.log(`\n✓ Server running on port ${PORT}`);
       console.log(`✓ Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`✓ Ready to accept requests\n`);
