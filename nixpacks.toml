@@ -1,0 +1,5 @@
+# Create nixpacks.toml file
+@"
+[phases.setup]
+aptPkgs = ["python3", "python3-pip", "ffmpeg"]
+"@ | Out-File -FilePath "nixpacks.toml" -Encoding UTF8 -NoNewline
